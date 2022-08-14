@@ -12,6 +12,10 @@ which contains every athlete that participated in the olympics (summer and winte
 I had to manipulate the data With R ,clean it and aggregate by Year, country and gender.
 
 during the work, I noticed that there are way less female participants in the early 20th century olympics and a normalization ratio is required
+female medal ratio - female medal winners/ total female participants in this country
+male medal ratio - male medal winners/ total male participants in this country
+*Ratio* - female medal ratio/male medal ratio
+so when ratio > 1 it's means that female achieve better in this country, and ratio < 1 - male achieve better results
 
 http://34.66.223.151/~a5/SummerOlympicsVisualizationByGender/index.html
 
@@ -20,4 +24,4 @@ http://34.66.223.151/~a5/SummerOlympicsVisualizationByGender/index.html
 
 
 You can switch olympic with the time slider.
-the map controls all other plots in the page, we can take a look on specific country over the years, or compare multiple countries/
+the map controls all other plots in the page, we can take a look on specific country over the years, or compare multiple countries.
