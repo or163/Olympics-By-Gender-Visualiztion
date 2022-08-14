@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+
+<style>
+
+
+  html{
+    display: table;
+    height: 100%;
+    margin: auto;
+  }
+
+  body{
+    display: table-cell;
+    vertical-align: center;
+  }
+
+  body svg{
+    font-family: 'Roboto';
+    font: 15px sans-serif;
+  }
+
+  .map{
+    position: absolute;
+    left: 580px;
+    top: 170px;
+    border-style: solid;
+    border-radius: 2px;
+    width: 650px;
+  }
+
+  .scatter{
+    position: absolute;
+    top: 150px;
+    left: 0px;
+    height: 500px;
+  }
+
+  .bar{
+    position: absolute;
+    top: 515px;
+    left: 35px;
+  }
+
+  .area{
+    position: absolute;
+    top: 515px;
+    left: 575px;
+
+  }
+
+  .pie{
+    position: absolute;
+    top: 705px;
+  }
+
+  #svg1{
+    position: absolute;
+    left: 335px;
+    top: 30px;
+  }
+
+  #svg2{
+    position: absolute;
+    left: 665px;
+    top: 30px;
+
+  }
+
+  #svg3{
+    position: absolute;
+    left: 500px;
+    top: 30px;
+  }
+.bt{
+  height: 30px;
+
+}
+
+  #b1{
+    position: absolute;
+    left: 560px;
+    width: 100px;
+  }
+
+  #b2{
+    position: absolute;
+    left: 670px;
+    width: 100px;
+
+  }
+
+  div.tooltip {
+    position: absolute;
+    text-align: center;
+    display: inline-block;
+    height: 40px;
+    padding: 7.5px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    box-sizing: unset;  
+  }
+
+  #ratioExplaining{
+    position: absolute;
+    font-size: 9px;
+    text-align: left;
+    top: 45px;
+    right: 350px;
+    width: 350px;
+  }
+
+  #category{
+    position: relative;
+    right: 54px;
+    top: 44px;
+    height: 30px;
+    width: 333px;
+    font-size: 14px;
+  }
+
+  #currentYearText{
+    position: relative;
+    right: 70px;
+    top: 18px;
+  }
+
+  .axis path,
+  .axis line {
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+  .unselected {
+    stroke: #000;
+  }
+
+  .selected {
+    stroke: rgb(255, 0, 0);
+  }
+
+  .toooltip {
+    position: absolute;
+    width: 190px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    display: inline-block;
+    pointer-events: none;
+    box-sizing: unset;
+    padding: 7.5px;
+  }
+
+  .button {
+    border: 2px solid #4CAF50;
+  }
+
+  .aa{
+    font-size: 21px;
+  }
+
+  .head{
+    position: absolute;
+    top: 65px;
+    left: 950px;
+  }
+
+  .legendText{
+    font-size: 10px;
+  }
+
+  .mytext{  
+    border-style: solid;
+    border-radius: 4px;
+  }
+	
+
+</style>
+
+<body style="background: rgba(195, 238, 255, 0.694)">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://unpkg.com/d3-simple-slider"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/1.12.1/d3-annotation.min.js"></script>
+  <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaëoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+  crossorigin="anonymous"/>
+
+
+
+  <div style="margin-left: 335px; margin-bottom: 2em; font-size: 3px;">
+    <h1 class="aa">Olympics by gender Visualization Project By Hadar and Or</h1>
+      </div>
+
+
+    <div class="col-sm"><div id="slider-time"></div>
+
+    <div class="head", style="text-align: right;" id="sliderContainer">
+      <p id="currentYearText" style="font-size: 13px;">Current Year:</p>
+      <p id="ratioExplaining">**Female Medal Ratio is number of female athletes divided by number of female medal winners. same goes for Male Medal Ratio accordingly.
+      Ratio is Female Medal Ratio divided By Male Medal Ratio, so when ratio < 1 it means that after normalization men achievments are better and if ratio > 1 -> women achieve better results</1> </p>
+      <p id="category">Select a Category: <select id="valPicker"></select></p>
+    </div>
+  
+  
+  <div class="scatter", id="svgContainer2"></div>
+  <div class="map", id="svgContainer"></div>
+
+  <div class="bar", id="barChartWrapper">
+    <svg width="500" height="190"></svg>
+  </div>
+
+  <div class="area", id="svgContainer3">
+</div>
+
+<div class="pie", id="svgContainer4">
+  <button class="bt" id="b1">Gender Pie</button>
+  <button class="bt" id="b2"">Medals Pie</button>
+  <svg id="svg1" width="400" height="200"></svg>
+  <svg id="svg2" width="400" height="200"></svg>
+  <svg id="svg3" width="400" height="200"></svg>
+</div>
+
+        
+
+
+  <script src="index.js"></script>
+  <script src="createMap.js"></script>
+  <script src="drawBarGraph.js"></script>
+  <script src="createAreaChart.js"></script>
+  <script src="createPie.js"></script>
+  <script src="appendCountryBar.js"></script>
+
+  
+
+</body>
+</html>
