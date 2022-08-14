@@ -17,6 +17,8 @@ male medal ratio - male medal winners/ total male participants in this country
 *Ratio* - female medal ratio/male medal ratio
 so when ratio > 1 it's means that female achieve better in this country, and ratio < 1 - male achieve better results
 
+This project was selected as top project of the course Information Visualization.
+
 http://34.66.223.151/~a5/SummerOlympicsVisualizationByGender/index.html
 
 
@@ -25,3 +27,4 @@ http://34.66.223.151/~a5/SummerOlympicsVisualizationByGender/index.html
 
 You can switch olympic with the time slider.
 the map controls all other plots in the page, we can take a look on specific country over the years, or compare multiple countries.
+The viz is highly interactive.
