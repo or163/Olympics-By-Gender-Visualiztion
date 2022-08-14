@@ -11,7 +11,7 @@ The original dataset is from kaggle - https://www.kaggle.com/datasets/heesoo37/1
 which contains every athlete that participated in the olympics (summer and winter) and their stats (physical, sport type and medal type or none)
 I had to manipulate the data With R ,clean it and aggregate by Year, country and gender.
 
-during the work, I noticed that there are way less female participants in the early 20th century olympics and a normalization ratio is required
+During the work, I noticed that there are way less female participants in the early 20th century olympics and a normalization ratio is required
 female medal ratio - female medal winners/ total female participants in this country
 male medal ratio - male medal winners/ total male participants in this country
 *Ratio* - female medal ratio/male medal ratio
