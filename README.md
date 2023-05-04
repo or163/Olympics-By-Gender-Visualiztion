@@ -1,4 +1,4 @@
-# Summer-Olympics-By-Gender-Visualiztion
+# Summer-Olympics-By-Gender-Visualization
 
 https://olympics-by-gender-visualiztion-d3-dyqa.vercel.app/
 
