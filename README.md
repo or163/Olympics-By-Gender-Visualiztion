@@ -1,6 +1,6 @@
 # Summer-Olympics-By-Gender-Visualiztion
 
-olympics-by-gender-visualiztion-d3-dyqa-8drcn97r6-or163.vercel.app
+https://olympics-by-gender-visualiztion-d3-dyqa.vercel.app/
 
 Olympics from a different prespective - Male and Female achievments along the olympics.
 
@@ -19,8 +19,7 @@ so when ratio > 1 it's means that female achieve better in this country, and rat
 
 This project was selected as top project of the course Information Visualization.
 
-olympics-by-gender-visualiztion-d3-dyqa-8drcn97r6-or163.vercel.app
-
+https://olympics-by-gender-visualiztion-d3-dyqa.vercel.app/
 
 <img width="944" alt="image" src="https://user-images.githubusercontent.com/88659243/184530257-e30b7456-d041-415b-93da-70d50987bb66.png">
 
